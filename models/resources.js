@@ -28,7 +28,7 @@ var asd_resources = sequelize.define("ASD_resources", {
         type: Sequelize.STRING,
         notNull: true
     },
-    Insurance_Accecpted: {
+    Insurance_Accepted: {
         type: Sequelize.BOOLEAN,
         notNull: true
     },
