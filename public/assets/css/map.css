@@ -1,5 +1,31 @@
+
+html, body
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+nav {
+	position: absolute;
+	z-index: 3;
+}
+
+/* Styling for map*/
+#map {
+	height: 80%;
+    width: 100%;
+}
+
 #respond {
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
 
 #respond input[type='text'],
@@ -17,3 +43,4 @@
     border-radius: 5px;
     line-height: 1.4em;
 }
+
