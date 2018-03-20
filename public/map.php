@@ -18,6 +18,15 @@
     <title>Map Page</title>
 </head>
 
+<?php
+require('Persistence.php');
+$comment_post_ID = 1;
+$db = new Persistence();
+$comments = $db->get_comments($comment_post_ID);
+$has_comments = (count($comments) > 0);
+?>
+
+
 <body id="Site">
 
     <!-- Nav Bar -->
@@ -55,14 +64,47 @@
 
     </div>
 
-    <div class="row" id="respond">
-        <div class="col-md-3">
+<section id="comments" class="body">
 
-        </div>
-        <div class="col-md-6">
-            Is your pattern library up to date today? Alla Kholmatova has just finished a fully fledged book on Design Systems and how
-            to get them right. With common traps, gotchas and the lessons she learned. Hardcover, eBook. Just sayin'. Table
-            of Contents →
+    <header>
+        <h2>Comments</h2>
+    </header>
+
+        <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />
+
+        <ol id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':''); ?>">
+            <li class="no-comments">Be the first to add a comment.</li>
+            <?php
+    foreach ($comments as $comment) {
+      ?>
+                <li>
+                    <article id="comment_<?php echo($comment['id']); ?>" class="hentry">
+                        <footer class="post-info">
+                            <abbr class="published" title="<?php echo($comment['date']); ?>">
+                                <?php echo( date('d F Y', strtotime($comment['date']) ) ); ?>
+                            </abbr>
+
+                            <address class="vcard author">
+                                By
+                                <a class="url fn" href="#">
+                                    <?php echo($comment['comment_author']); ?>
+                                </a>
+                            </address>
+                        </footer>
+
+                        <div class="entry-content">
+                            <p>
+                                <?php echo($comment['comment']); ?>
+                            </p>
+                        </div>
+                    </article>
+                </li>
+                <?php
+    }
+  ?>
+        </ol>
+
+        <div id="respond">
 
             <h3>Leave a Comment</h3>
 
@@ -71,28 +113,18 @@
                 <label for="comment_author" class="required">Your name</label>
                 <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
 
-                <label for="email" class="required">Your email;</label>
+                <label for="email" class="required">Your email:</label>
                 <input type="email" name="email" id="email" value="" tabindex="2" required="required">
 
                 <label for="comment" class="required">Your message</label>
                 <textarea name="comment" id="comment" rows="10" tabindex="4" required="required"></textarea>
 
-                <!-- comment_post_ID value hard-coded as 1 -->
                 <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
                 <input name="submit" type="submit" value="Submit comment" />
-
             </form>
         </div>
-    </div>
+</section>
 
-    <template id="post-template">
-        <li class="list-group-item">
-            <i class="glyphicon glyphicon-chevron-up" @click="upvote" :class="{disabled: upvoted}"></i>
-            <span class="label label-primary">{{ votes }}</span>
-            <i class="glyphicon glyphicon-chevron-down" @click="downvote" :class="{disabled: downvoted}"></i>
-            <a>{{ post.title }}</a>
-        </li>
-    </template>
 
     <footer class="footer" align="center">
         <div class="container">
@@ -102,6 +134,10 @@
 
 </body>
 
+<!--Connection to database-->
+<?php
+require('assets/pusher_config.php');
+?>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -113,5 +149,6 @@
 <script src="public/assets/js/upvote.js"></script>
 
 <script type="text/javascript" src="assets/js/map.js"></script>
+<script type="text/javascript" src="assets/js/upvote.js"></script>
 
 </html>
