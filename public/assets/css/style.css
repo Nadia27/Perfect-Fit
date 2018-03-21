@@ -2,6 +2,12 @@
     background-color: whitesmoke;
 }
 
+#photo {
+    height: 30rem;
+    width: 25rem;
+}
+
+
 .intro-2 {
     background: url("https://mdbootstrap.com/img/Photos/Others/architecture.jpg")no-repeat center center;
     background-size: cover;
