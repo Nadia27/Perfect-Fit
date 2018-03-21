@@ -34,7 +34,7 @@
                     <a class="nav-link" href="recommend.html">Add/Recommend</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="authentication.html">Login</a>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
                 </li>
             </ul>
         </div>
@@ -42,58 +42,116 @@
     <br>
 
     <!-- Search box -->
-    <div id="search" class="float-right">
-        <img src="img_girl.jpg" alt="Girl in a jacket">
-        <input type="text" placeholder="Search..">
+    <div class="container-fluid">
+        <div id="search" class="float-right">
+            <img src="img_girl.jpg" alt="Girl in a jacket">
+            <input type="text" placeholder="Search..">
+        </div>
     </div>
     <br>
     <br>
 
-    <!-- Div to display map -->
+    <div class="container-fluid" id="mapPgContainer">
+        <div class="row">
+            <div class="col-md-6" style="min-height: 900px;">
+                <!-- Div to display map -->
+                <div id="map">
 
-    <div class="col-lg-12" id="map">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent
+                    delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details of
+                    the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+                    at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos
+                    erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
+                    copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                    hendrerit. Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare
+                    his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
+                    copiosae hendrerit. Eos erant Details of the site.</p>
+                <br>
+                <h3>Leave a Comment</h3>
+                <hr>
+                <form>
+                    <div class="form-group">
+                        <label for="comment_author">Your Name:</label>
+                        <input type="text" class="form-control" id="commentAuthor" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment_email">Your Email:</label>
+                        <input type="email" class="form-control" id="authorEmail" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Your Message:</label>
+                        <textarea class="form-control" id="authorComment" rows="5" required></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
 
+            </div>
+            <div class="col-md-6" id="commentThreads">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Comments
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="row" id="respond">
-        <div class="col-md-3">
-
+    <!-- Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLongTitle">Please Login or Create Accout</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email Address</label>
+                                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="John@soandso.net" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" id="createAccount">Create Account</button>
+                        <button class="btn btn-primary" id="login">Log in</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-            Is your pattern library up to date today? Alla Kholmatova has just finished a fully fledged book on Design Systems and how
-            to get them right. With common traps, gotchas and the lessons she learned. Hardcover, eBook. Just sayin'. Table
-            of Contents →
 
-            <h3>Leave a Comment</h3>
-
-            <form action="post_comment.php" method="post" id="commentform">
-
-                <label for="comment_author" class="required">Your name</label>
-                <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
-
-                <label for="email" class="required">Your email;</label>
-                <input type="email" name="email" id="email" value="" tabindex="2" required="required">
-
-                <label for="comment" class="required">Your message</label>
-                <textarea name="comment" id="comment" rows="10" tabindex="4" required="required"></textarea>
-
-                <!-- comment_post_ID value hard-coded as 1 -->
-                <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
-                <input name="submit" type="submit" value="Submit comment" />
-
-            </form>
-        </div>
-    </div>
-
-    <template id="post-template">
+    <!-- <template id="post-template">
         <li class="list-group-item">
             <i class="glyphicon glyphicon-chevron-up" @click="upvote" :class="{disabled: upvoted}"></i>
             <span class="label label-primary">{{ votes }}</span>
             <i class="glyphicon glyphicon-chevron-down" @click="downvote" :class="{disabled: downvoted}"></i>
             <a>{{ post.title }}</a>
         </li>
-    </template>
-
+    </template> -->
+    
+    <!-- Footer -->
     <footer class="footer" align="center">
         <div class="container">
             <cite title="Source Title">Phone Number: 404-000-0000 | Website: website@website.com | Github | &copy; Copyright 2018 Poisoned Proxies</cite>

@@ -32,6 +32,7 @@ btnSignup.addEventListener('click', e =>{
   // Sign in
   var promise = auth.createUser WithEmailAndPassword(email, pass);
   promise.catch(e => console.log(e.message));
+
 });
 firebase.auth().omAuthStateChanged(firebaseUser => {
   if(firebaseUser) {
