@@ -1,4 +1,3 @@
 
 // Animations init
-new WOW().init();                    
-                    
+new WOW().init();
