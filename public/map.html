@@ -15,7 +15,7 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7obRx7vf5Ef2XTKtUdhPMjd9SqNymQZ0&callback=initMap"
         type="text/javascript"></script>
 
-    <title>Map Page</title>
+    <title>ASD Resources</title>
 </head>
 
 <body id="Site">
@@ -23,7 +23,7 @@
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="index.html">Navbar 2</a>
+            <a class="navbar-brand mx-auto" href="index.html">Poisoned Proxies</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,69 +31,123 @@
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Add/Recommend</a>
+                    <a class="nav-link" href="map.html">ASD Resources</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="authentication.html">Login</a>
+                    <a class="nav-link" href="recommend.html">Recommend</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
                 </li>
             </ul>
         </div>
     </nav>
-    <br>
 
     <!-- Search box -->
-    <div id="search" class="float-right">
-        <img src="img_girl.jpg" alt="Girl in a jacket">
-        <input type="text" placeholder="Search..">
+    <div class="container-fluid">
+        <div id="search" class="float-right">
+            <img src="img_girl.jpg" alt="Girl in a jacket">
+            <input type="text" placeholder="Search..">
+        </div>
     </div>
     <br>
     <br>
+    <!-- Main content -->
+    <div class="container-fluid" id="mapPgContainer">
+        <div class="row">
+            <div class="col-md-6" style="min-height: 900px;">
+                <!-- Div to display map -->
+                <div id="map">
 
-    <!-- Div to display map -->
+                </div>
+            </div>
+            <!-- Div where center will be displayed once user clicks on map marker -->
+            <div class="col-md-6">
+                <p>Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent
+                    delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details of
+                    the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+                    at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos
+                    erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
+                    copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
+                    hendrerit. Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare
+                    his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
+                    copiosae hendrerit. Eos erant Details of the site.</p>
+                <br>
+                <!-- Leave a comment form -->
+                <h3>Leave a Comment</h3>
+                <hr>
+                <form>
+                    <div class="form-group">
+                        <label for="comment_author">Your Name:</label>
+                        <input type="text" class="form-control" id="commentAuthor" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment_email">Your Email:</label>
+                        <input type="email" class="form-control" id="authorEmail" placeholder="name@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Your Message:</label>
+                        <textarea class="form-control" id="authorComment" rows="5" required></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
 
-    <div class="col-lg-12" id="map">
-
+            </div>
+            <!-- Where the comments will be posted -->
+            <div class="col-md-6" id="commentThreads">
+                <div class="card text-center">
+                    <div class="card-header">
+                        Comments
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="row" id="respond">
-        <div class="col-md-3">
-
-        </div>
-        <div class="col-md-6">
-            Is your pattern library up to date today? Alla Kholmatova has just finished a fully fledged book on Design Systems and how
-            to get them right. With common traps, gotchas and the lessons she learned. Hardcover, eBook. Just sayin'. Table
-            of Contents →
-
-            <h3>Leave a Comment</h3>
-
-            <form action="post_comment.php" method="post" id="commentform">
-
-                <label for="comment_author" class="required">Your name</label>
-                <input type="text" name="comment_author" id="comment_author" value="" tabindex="1" required="required">
-
-                <label for="email" class="required">Your email;</label>
-                <input type="email" name="email" id="email" value="" tabindex="2" required="required">
-
-                <label for="comment" class="required">Your message</label>
-                <textarea name="comment" id="comment" rows="10" tabindex="4" required="required"></textarea>
-
-                <!-- comment_post_ID value hard-coded as 1 -->
-                <input type="hidden" name="comment_post_ID" value="1" id="comment_post_ID" />
-                <input name="submit" type="submit" value="Submit comment" />
-
-            </form>
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLongTitle">Please Login or Create Accout</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="John@soandso.net" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="createAccount">Create Account</button>
+                    <button class="btn btn-primary" id="login">Log in</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <template id="post-template">
-        <li class="list-group-item">
-            <i class="glyphicon glyphicon-chevron-up" @click="upvote" :class="{disabled: upvoted}"></i>
-            <span class="label label-primary">{{ votes }}</span>
-            <i class="glyphicon glyphicon-chevron-down" @click="downvote" :class="{disabled: downvoted}"></i>
-            <a>{{ post.title }}</a>
-        </li>
-    </template>
-
+    <!-- Footer -->
     <footer class="footer" align="center">
         <div class="container">
             <cite title="Source Title">Phone Number: 404-000-0000 | Website: website@website.com | Github | &copy; Copyright 2018 Poisoned Proxies</cite>
@@ -102,7 +156,6 @@
 
 </body>
 
-<!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -112,6 +165,8 @@
     crossorigin="anonymous"></script>
 <script src="public/assets/js/upvote.js"></script>
 
+<!-- Custom Script -->
 <script type="text/javascript" src="assets/js/map.js"></script>
+<script type="text/javascript" src="assets/js/authentication.js"></script>
 
 </html>

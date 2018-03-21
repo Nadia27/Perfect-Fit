@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,7 +14,7 @@
     <!-- Material Design Bootstrap -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
 
-    <title>Main Autism Page</title>
+    <title>Main</title>
 </head>
 
 <body id="Site">
@@ -35,10 +35,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Add/Recommend</a>
+                    <a class="nav-link" href="map.html">ASD Resources</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="authentication.html">Login</a>
+                    <a class="nav-link" href="recommend.html">Recommend</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
                 </li>
             </ul>
             <form class="form-inline">
@@ -140,10 +143,8 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
-
-    <div class="container">
+    <!-- Mission statement -->
+    <div class="container" id="missionContainer">
         <div class="row">
             <div class="col-lg">
             <section class="pt-5">
@@ -158,10 +159,39 @@
             </div>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLongTitle">Please Login or Create Accout</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="John@soandso.net" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="createAccount">Create Account</button>
+                    <button class="btn btn-primary" id="login">Log in</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer" align="center">
         <div class="container">
             <cite title="Source Title">Phone Number: 404-000-0000 | Website: website@website.com | Github | &copy; Copyright 2018 Poisoned Proxies</cite>
@@ -169,6 +199,7 @@
     </footer>
 
 </body>
+  
 <!-- JQuery -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!-- Bootstrap tooltips -->
