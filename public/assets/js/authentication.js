@@ -10,14 +10,12 @@
   };
   firebase.initializeApp(config);
 
-
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
       document.getElementById('user_div').style.display = 'initial';
       document.getElementById('login_div').style.display = 'none';
       
-
       var user = firebase.auth().currentUser;
     }
 
@@ -28,10 +26,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
         if(email_verified){
           document.getElementById('sendVerfication').style.display = 'none';
-       
         } else{
           document.getElementById('sendVerfication').style.display = 'initial';
-          
         }
 
         document.getElementById('user_para').innerHTML = 'User : ' + email_id + '<br><br>Currently you email verification status is : ' + email_verified;
@@ -41,13 +37,8 @@ firebase.auth().onAuthStateChanged(function(user) {
       // No user is signed in.
        document.getElementById('user_div').style.display = 'none';
       document.getElementById('login_div').style.display = 'initial';
-     
-
     }
 });
-
-
-
 
 $('#login').on('click', function(){
     var userEmail = document.getElementById('inputEmail').value;
@@ -58,12 +49,9 @@ $('#login').on('click', function(){
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
-
       alert('Error : ' + errorMessage);
-
     });
 });
-
 
 $('#createAccount').on('click', function(){
 
@@ -75,9 +63,6 @@ $('#createAccount').on('click', function(){
     var errorCode = error.code;
     var errorMessage = error.message;
     // ...
-
       alert('Error : ' + errorMessage);
-
     });
-
 });
