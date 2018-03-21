@@ -1,6 +1,7 @@
 // Array to hold ASD centers and corresponding latitude and logitude
 var locations = [
     ["Marcus Autism Center", 33.809384, -84.335368],
+    ["Kiddo's Clubhouse", 34061336, -84.238194],
     ["Kiddo's Clubhouse Foundation", 34061336, -84.238194],
     ["Parent to Parent of Georgia", 33.887516, -84.263388],
     ["Right Start Therapies", 33.854175, -84.025338],
@@ -57,8 +58,23 @@ function initMap() {
             });
     };
 };
-    // Ready Function
-    $(document)
-        .ready(function () {
-            initMap();
-        });
+
+// $('.mapmarker').on('click', function(event) {
+//     event.preventDefault();
+//     var lat = $(this).data.lat;
+//     var lng = $(this).data.lng;
+
+//     $.post('/api/route/for/map/crap', {
+//         lat: lat,
+//         lng: lng 
+//     }).then(function(data) {
+//         console.log(data);
+//     });
+// });
+
+// google.maps.event.addListener(marker, 'click', (function () {
+//     // Ready Function
+//     $(document)
+//         .ready(function () {
+//             initMap();
+//         });
