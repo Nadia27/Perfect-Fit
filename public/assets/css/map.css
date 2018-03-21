@@ -12,6 +12,10 @@ html {
     position: relative;
 }
 
+.modal-open {
+    padding-right: 0 !important;
+}
+
 nav {
 	position: absolute;
 	z-index: 3;

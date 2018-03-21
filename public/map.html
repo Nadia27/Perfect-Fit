@@ -15,7 +15,7 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7obRx7vf5Ef2XTKtUdhPMjd9SqNymQZ0&callback=initMap"
         type="text/javascript"></script>
 
-    <title>Map Page</title>
+    <title>ASD Resources</title>
 </head>
 
 <body id="Site">
@@ -23,7 +23,7 @@
     <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
         <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="index.html">Navbar 2</a>
+            <a class="navbar-brand mx-auto" href="index.html">Poisoned Proxies</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,7 +31,10 @@
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Add/Recommend</a>
+                    <a class="nav-link" href="map.html">ASD Resources</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="recommend.html">Recommend</a>
                 </li>
                 <li class="nav-item">
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
@@ -39,7 +42,6 @@
             </ul>
         </div>
     </nav>
-    <br>
 
     <!-- Search box -->
     <div class="container-fluid">
@@ -50,7 +52,7 @@
     </div>
     <br>
     <br>
-
+    <!-- Main content -->
     <div class="container-fluid" id="mapPgContainer">
         <div class="row">
             <div class="col-md-6" style="min-height: 900px;">
@@ -59,6 +61,7 @@
 
                 </div>
             </div>
+            <!-- Div where center will be displayed once user clicks on map marker -->
             <div class="col-md-6">
                 <p>Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent
                     delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details of
@@ -70,6 +73,7 @@
                     his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
                     copiosae hendrerit. Eos erant Details of the site.</p>
                 <br>
+                <!-- Leave a comment form -->
                 <h3>Leave a Comment</h3>
                 <hr>
                 <form>
@@ -93,6 +97,7 @@
             <div class="col-md-3">
 
             </div>
+            <!-- Where the comments will be posted -->
             <div class="col-md-6" id="commentThreads">
                 <div class="card text-center">
                     <div class="card-header">
@@ -111,46 +116,37 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLongTitle">Please Login or Create Accout</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email Address</label>
-                                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="John@soandso.net" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" id="createAccount">Create Account</button>
-                        <button class="btn btn-primary" id="login">Log in</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                    </div>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLongTitle">Please Login or Create Accout</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="John@soandso.net" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="createAccount">Create Account</button>
+                    <button class="btn btn-primary" id="login">Log in</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+    </div>
 
-    <!-- <template id="post-template">
-        <li class="list-group-item">
-            <i class="glyphicon glyphicon-chevron-up" @click="upvote" :class="{disabled: upvoted}"></i>
-            <span class="label label-primary">{{ votes }}</span>
-            <i class="glyphicon glyphicon-chevron-down" @click="downvote" :class="{disabled: downvoted}"></i>
-            <a>{{ post.title }}</a>
-        </li>
-    </template> -->
-    
     <!-- Footer -->
     <footer class="footer" align="center">
         <div class="container">
@@ -160,7 +156,6 @@
 
 </body>
 
-<!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -170,6 +165,8 @@
     crossorigin="anonymous"></script>
 <script src="public/assets/js/upvote.js"></script>
 
+<!-- Custom Script -->
 <script type="text/javascript" src="assets/js/map.js"></script>
+<script type="text/javascript" src="assets/js/authentication.js"></script>
 
 </html>
