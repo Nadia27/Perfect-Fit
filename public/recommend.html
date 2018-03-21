@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
 
-    <title>Recommendation Page</title>
+    <title>Recommendation</title>
 </head>
 
 <body id="Site">
 
+    <!-- Nav Bar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-
         <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="index.html">Navbar 2</a>
+            <a class="navbar-brand mx-auto" href="index.html">Poisoned Proxies</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,21 +26,25 @@
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Add/Recommend</a>
+                    <a class="nav-link" href="map.html">ASD Resources</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="authentication.html">Login</a>
+                    <a class="nav-link" href="recommend.html">Recommend</a>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <br>
+    <!-- Main content -->
     <div class="container-fluid" id="recoContainer">
         <div class="row">
             <div class="col-md-3">
 
             </div>
+            <!-- Recommendation form -->
             <div class="col-md-6" id="recoForm">
                 <h3>Add a Recommendation</h3>
                 <hr>
@@ -119,6 +123,38 @@
         </div>
     </div>
 
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLongTitle">Please Login or Create Accout</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="John@soandso.net" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="createAccount">Create Account</button>
+                    <button class="btn btn-primary" id="login">Log in</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer" align="center">
         <div class="container">
             <cite title="Source Title">Phone Number: 404-000-0000 | Website: website@website.com | Github | &copy; Copyright 2018 Poisoned Proxies</cite>
@@ -127,7 +163,6 @@
 
 </body>
 
-<!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
@@ -135,6 +170,8 @@
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-<script src="public/assets/js/upvote.js"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript" src="assets/js/recommendation.js"></script>
 
 </html>
