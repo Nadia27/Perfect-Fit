@@ -6,14 +6,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="assets/css/map.css">
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <!-- Firebase Reference -->
 
     <!-- Google map API-->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7obRx7vf5Ef2XTKtUdhPMjd9SqNymQZ0&callback=initMap"
-        type="text/javascript"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7obRx7vf5Ef2XTKtUdhPMjd9SqNymQZ0"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom Script -->
+    <script defer src="assets/js/map.js"></script>
+    <!-- <script defer src="assets/js/authentication.js"></script> -->
+    <!-- <script defer src="public/assets/js/upvote.js"></script> -->
 
     <title>ASD Resources</title>
 </head>
@@ -63,16 +72,10 @@
             </div>
             <!-- Div where center will be displayed once user clicks on map marker -->
             <div class="col-md-6">
-                <p>Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent
-                    delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details of
-                    the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
-                    at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos
-                    erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
-                    copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
-                    hendrerit. Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare
-                    his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
-                    copiosae hendrerit. Eos erant Details of the site.</p>
-                <br>
+                <div id="info">
+
+                </div>
+                
                 <!-- Leave a comment form -->
                 <h3>Leave a Comment</h3>
                 <hr>
@@ -155,15 +158,5 @@
     </footer>
 
 </body>
-
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
-<!-- Custom Script -->
-<script type="text/javascript" src="assets/js/map.js"></script>
-<script type="text/javascript" src="assets/js/authentication.js"></script>
-<script src="public/assets/js/upvote.js"></script>
 
 </html>
