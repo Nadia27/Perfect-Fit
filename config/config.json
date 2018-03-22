@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "xavija08",
-    "database": "asd_resources_db",
+    "database": "ASD_resources",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
