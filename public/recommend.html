@@ -16,41 +16,52 @@
 </head>
 
 <body id="Site">
-<nav class="navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar">
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
-        <a class="navbar-brand" href="#">
-            <strong>Autism Center</strong>
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="index.html" target="_blank">
+            <strong class="blue-text">Autism Center</strong>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- Left -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home
+                    <a class="nav-link waves-effect" href="index.html">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
+            </ul>
+
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
                 <li class="nav-item">
-                    <a class="nav-link" href="map.html">ASD Resources</a>
+                    <a href="map.html" class="nav-link waves-effect" target="_blank">
+                        ASD Resources
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Recommend</a>
+                    <a href="recommend.html" class="nav-link waves-effect" target="_blank">
+                        Recommend
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
+                    <a class="nav-link border border-light rounded waves-effect" data-toggle="modal" data-target="#loginModal" id="modalBtn"
+                        target="_blank">
+                        Log In
+                    </a>
                 </li>
             </ul>
-            <form class="form-inline">
-                <div class="md-form mt-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </div>
-            </form>
+
         </div>
     </div>
 </nav>
-
+    <br>
+    <br>
+    <br>
     <br>
     <div class="row">
         <div class="col-md-3">
@@ -165,13 +176,34 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer" align="center">
-        <div class="container">
-            <cite title="Source Title">Phone Number: 404-000-0000 | Website: website@website.com | Github | &copy; Copyright 2018 Poisoned Proxies</cite>
-        </div>
-    </footer>
+<!--Footer-->
+<footer class="page-footer text-center font-small mdb-color primary-color mt-4 wow fadeIn">
 
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa fa-facebook mr-3"></i>
+        </a>
+
+        <a href="https://twitter.com/" target="_blank">
+            <i class="fa fa-twitter mr-3"></i>
+        </a>
+
+        <a href="https://github.com/juhuyoon/Poisoned_Proxies" target="_blank">
+            <i class="fa fa-github mr-3"></i>
+        </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+        © 2018 Copyright: Poisoned Proxies | Phone Number: 404-000-0000 | Website: website@website.com</a>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
 </body>
 
 <!-- JQuery -->
