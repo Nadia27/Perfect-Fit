@@ -18,40 +18,50 @@
 </head>
 
 <body id="Site">
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
     <div class="container">
-        <a class="navbar-brand" href="#">
-            <strong>Autism Center</strong>
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="index.html" target="_blank">
+            <strong class="blue-text">Autism Center</strong>
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="map.html">ASD Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Recommend</a>
-                </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
-                </li>
-            </ul>
-            <form class="form-inline">
-                <div class="md-form mt-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                </div>
-            </form>
-        </div>
-    </div>
+<!-- Links -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+    <!-- Left -->
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link waves-effect" href="#">Home
+                <span class="sr-only">(current)</span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Right -->
+    <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+            <a href="map.html" class="nav-link waves-effect" target="_blank">
+                ASD Resources
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="recommend.html" class="nav-link waves-effect" target="_blank">
+                Recommend
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link border border-light rounded waves-effect" data-toggle="modal" data-target="#loginModal" id="modalBtn" target="_blank">
+                Log In
+            </a>
+        </li>
+    </ul>
+
+</div>
+</div>
 </nav>
+
 
    <!--Intro Section-->
    <section class="view intro-2 hm-gradient">
@@ -208,5 +218,5 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
-<script src="assets/js/index.js"></script>
+<script src="assets/js/wow.js"></script>
 </html>
