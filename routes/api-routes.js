@@ -28,4 +28,12 @@ module.exports = function (app) {
             res.json(dbASD_resources_table);
         });
     });
+
+    // POST route for saving a new post
+    app.post("/api/suggested", function (req, res) {
+        console.log(req.body);
+        db.suggested.create(req.body).then(function (dbsuggested) {
+            res.json(dbsuggested);
+        });
+    });
 };
