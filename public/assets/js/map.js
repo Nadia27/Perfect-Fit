@@ -38,22 +38,12 @@ function initMap() {
     });
 };
 
-// function getResources() {
-//     $.get("/api/resources", function(data) {
-//         for (var i = 0; i < data.length; i++) {
-//             console.log(data[i]);
-//         };
-//     });
-// };
-
-
-
-    infowindow = new google.maps.InfoWindow({});
+    // infowindow = new google.maps.InfoWindow({});
 
 //     // For loop to mark/pin each ASD center from the array with marker based on latitude and longitude
-//     for (var i = 0; i < locations.length; i++) {
+//     for (var i = 0; i < dbResources.length; i++) {
 //             var marker = new google.maps.Marker({
-//                 position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+//                 position: new google.maps.LatLng(dbResources[i][8], dbResources[i][9]),
 //                 map: map,  
 //             });
 //             google.maps.event.addListener(marker, "mouseover", (function (marker, i) {
@@ -97,25 +87,15 @@ function initMap() {
 //     });
 // })
 
-// // When the page loads, grab all of our resources
-// $.get("/api/resources", function (data) {
-
-//     for (var i = 0; i < data.length; i++) {
-//         console.log(data[i]);
-
-//         var row = $("<div>");
-//         row.addClass("resource");
-
-//         row.append((data[i].Name) + " " + (data[i].Location) + " " + (data[i].Phone_Number) + " " + (data[i].Description) +" "+ (data[i].Insurance_Accepted) + " " + (data[i].Catergory) );
-
-//         $("#resources-container").prepend(row);
-
-//     }
-
-// });
 
 
-
+$.get('/api/resources').then(function(data) {
+    for (var i = 0; i < data.length; i++) {
+        var lat = Number(data[i].Latitude);
+        var lng = Number(data[i].Longitude);
+        console.log(`${lat}, ${lng}`);
+    }
+});
 
 
     // Ready Function
