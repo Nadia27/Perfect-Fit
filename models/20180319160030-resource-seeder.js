@@ -2,38 +2,29 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    /*
-      Add altering commands here.
-      Return a promise to correctly handle asynchronicity.
-      */
-    return queryInterface.bulkInsert('asd_resources_tables', [{
+   
+    return queryInterface.bulkInsert('resources', [{
         Name: 'Marcus Autism Center',
         Location: '1920 Briarcliff Rd NE, Atlanta, GA 30329',
         Phone_Number: 4047859350,
         Description: 'Specializes in diagnoses and various therapy treatment of individual with Autism.',
         Price: 5,
         Insurance_Accepted: true,
-        Catergory: 'Therapy',
-        CreatedAt: new Date(),
-        updatedAt: new Date()
-      }, {
-        Name: 'Kiddo\'s Clubhouse Foundation',
-        Location: '11539 Park Woods Cir #502, Alpharetta, GA 30005',
-        Phone_Number: 6785273224,
-        Description: 'Provides scholarships to families who are not able to pay for therapeutic services.',
-        Price: 0,
-        Insurance_Accepted: true,
-        Catergory: 'Financial Support',
+        Category: 'Therapy',
+        Latitude: 33.809384,
+        Longitude: -84.335368, 
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
         Name: 'Kiddo\'s Clubhouse',
         Location: '11539 Park Woods Cir #502, Alpharetta, GA 30005',
         Phone_Number: 6785273224,
-        Description: 'Therapy services: Speech, Occupational, Physical, ABA, and more.',
+        Description: 'Therapy services: Speech, Occupational, Physical, ABA, and also offers financial support for families not able to pay for therapeutic services, and more.',
         Price: 3,
         Insurance_Accepted: true,
-        Catergory: 'Therapy',
+        Category: 'Therapy',
+        Latitude: 34.061336,
+        Longitude: -84.238194,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -43,7 +34,9 @@ module.exports = {
         Description: 'Parent to Parent of Georgia provides support, information services, training, and leadership opportunities for families who have children and youth with disabilities.',
         Price: 0,
         Insurance_Accepted: false,
-        Catergory: 'Support',
+        Category: 'Support',
+        Latitude: 33.887516,
+        Longitude: -84.263388,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -53,7 +46,9 @@ module.exports = {
         Description: 'Intervention clinic providing a host of therapies: Speech, Occupational, Physical, and Reading Tutoring.',
         Price: 3,
         Insurance_Accepted: true,
-        Catergory: 'Therapy',
+        Category: 'Therapy',
+        Latitude: 33.854175,
+        Longitude: -84.025338,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -63,7 +58,9 @@ module.exports = {
         Description: 'Private school focused on developing the abilities of children of all ages and abilities.',
         Price: 5,
         Insurance_Accepted: false,
-        Catergory: 'Education',
+        Category: 'Education',
+        Latitude: 33.802434,
+        Longitude: -83.702255,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -73,7 +70,9 @@ module.exports = {
         Description: 'Non-profit school (Kindergarten through 8th Grade) that specializes in educating children with ADHD, Autism, Asperger’s, anxiety, and other learning differences to equip them with the skills needed to navigate the world with confidence.',
         Price: 5,
         Insurance_Accepted: false,
-        Catergory: 'Education',
+        Category: 'Education',
+        Latitude: 33.841700,
+        Longitude: -84.262889,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -83,7 +82,9 @@ module.exports = {
         Description: 'MDE School’s mission is to provide a loving environment for all children with delayed communication and language processing skills, while keeping a 4-1 ratio.',
         Price: 5,
         Insurance_Accepted: false,
-        Catergory: 'Education',
+        Category: 'Education',
+        Latitude: 33.986888,
+        Longitude: -84.428751,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -93,7 +94,9 @@ module.exports = {
         Description: 'Sensations is an exciting, safe alternative to typical playgrounds. It is designed especially for sensory recreation. It is great for kids who have Autism, are on the Autism Spectrum, have Sensory Processing Disorders, ADHD, Down\'s Syndrome, Asperger\'s Syndrome and all children who need sensory recreation.',
         Price: 1,
         Insurance_Accepted: false,
-        Catergory: 'Extracurricular',
+        Category: 'Extracurricular',
+        Latitude: 33.823227,
+        Longitude: -84.347908,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -103,7 +106,9 @@ module.exports = {
         Description: 'Neverland Aquatics promotes a lifelong passion for fitness, hard work, self worth, and community through rigorous and meaningful therapeutic aquatic instruction for individuals with disabilities.',
         Price: 2,
         Insurance_Accepted: false,
-        Catergory: 'Extracurricular',
+        Category: 'Extracurricular',
+        Latitude: 34.257022,
+        Longitude: -84.166505,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -113,7 +118,9 @@ module.exports = {
         Description: 'Provides recreational riding lessons for people with a disabilties such as: Autisum Spectrun Disorder, Sensory Intergration Disorder, etc.',
         Price: 1,
         Insurance_Accepted: true,
-        Catergory: 'Extracurricular',
+        Category: 'Extracurricular',
+        Latitude: 33.571851,
+        Longitude: -84.633583,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -123,7 +130,9 @@ module.exports = {
         Description: 'Provides summer day camps for children of all abilities. Services provided through The Bridge of Georgia School located in Monroe, GA.',
         Price: 2,
         Insurance_Accepted: false,
-        Catergory: 'Extracurricular',
+        Category: 'Extracurricular',
+        Latitude: 33.836338,
+        Longitude: -83.729502,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -133,7 +142,9 @@ module.exports = {
         Description: 'Camp You B You day camp offers social skills building within an inclusive setting for children ages 5-12 with autism and related disorders who present with moderate to high functioning skills.',
         Price: 3,
         Insurance_Accepted: false,
-        Catergory: 'Extracurricular',
+        Category: 'Extracurricular',
+        Latitude: 33.787192,
+        Longitude: -84.307319,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -143,7 +154,9 @@ module.exports = {
         Description: 'Nonprofit dental office providing accessible and compassionate dental treatment to children and adults with developmental disabilities.',
         Price: 5,
         Insurance_Accepted: true,
-        Catergory: 'Medical',
+        Category: 'Medical',
+        Latitude: 33.827187,
+        Longitude: -84.341341,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -153,7 +166,9 @@ module.exports = {
         Description: 'Specialized pediatric care. Our team makes sure your child is comfortable and happy.',
         Price: 5,
         Insurance_Accepted: true,
-        Catergory: 'Medical',
+        Category: 'Medical',
+        Latitude: 33.793936,
+        Longitude: -84.319958,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -163,7 +178,9 @@ module.exports = {
         Description: 'Full day education program designed to provide behavioral support and spend time with other individuals with similar symptoms to promote social interactions.',
         Price: 1,
         Insurance_Accepted: false,
-        Catergory: 'Extracurricular',
+        Category: 'Extracurricular',
+        Latitude: 33.927360, 
+        Longitude: -84.147623,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -173,7 +190,9 @@ module.exports = {
         Description: 'Full time care for individuals with mental health issues, similar to elderly centers and 24/7 coverage',
         Price: 3,
         Insurance_Accepted: false,
-        Catergory: 'Medical',
+        Category: 'Medical',
+        Latitude: 34.037512,
+        Longitude: -84.062933,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }, {
@@ -183,7 +202,9 @@ module.exports = {
         Description: 'Advocacy, transition, 4-core-services, independent living skills education center',
         Price: 0,
         Insurance_Accepted: false,
-        Catergory: 'Support',
+        Category: 'Support',
+        Latitude: 33.839800,
+        Longitude: -84.256196,
         CreatedAt: new Date(),
         updatedAt: new Date()
       }
