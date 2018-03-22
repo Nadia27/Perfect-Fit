@@ -1,5 +1,4 @@
 // Dependencies 
-
 // Requiring the resources.js model
 var db = require("../models");
 
@@ -11,6 +10,7 @@ module.exports = function (app) {
 
         }).then(function (dbResources) {
             res.json(dbResources);
+            
         });
     });
     //     // POST route for saving a new resource
