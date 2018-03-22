@@ -15,32 +15,54 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <title>Authentication Page</title>
 </head>
-
+<div id="all-container">
 <body id="Site">
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
 
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="index.html">Poisoned Proxies</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="map.html">ASD Resources</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Recommend</a>
-                </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="index.html" target="_blank">
+            <strong class="blue-text">Autism Center</strong>
+        </a>
+<!-- Links -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
+    <!-- Left -->
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-item" href="index.html">Home
+                <span class="sr-only">(current)</span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Right -->
+    <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+            <a href="map.html" class="nav-link waves-effect" target="_blank">
+                ASD Resources
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="recommend.html" class="nav-link waves-effect" target="_blank">
+                Recommend
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link border border-light rounded waves-effect" data-toggle="modal" data-target="#loginModal" id="modalBtn" target="_blank">
+                Log In
+            </a>
+        </li>
+    </ul>
+
+</div>
+</div>
+</nav>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Main content -->
     <div class="container-fluid" id="loginContainer">
         <div class="row">
@@ -67,16 +89,34 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer" align="center">
-        <div class="container">
-            <cite title="Source Title">Phone Number: 404-000-0000 | Website: website@website.com | Github | &copy; Copyright 2018 Poisoned Proxies</cite>
-        </div>
-    </footer>
+<!--Footer-->
+<footer class="page-footer text-center font-small mdb-color primary-color mt-4 wow fadeIn">
 
-</body>
+    <hr class="my-4">
 
+    <!-- Social icons -->
+    <div class="pb-4">
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa fa-facebook mr-3"></i>
+        </a>
 
+        <a href="https://twitter.com/" target="_blank">
+            <i class="fa fa-twitter mr-3"></i>
+        </a>
+        
+        <a href="https://github.com/juhuyoon/Poisoned_Proxies" target="_blank">
+            <i class="fa fa-github mr-3"></i>
+        </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+        © 2018 Copyright: Poisoned Proxies | Phone Number: 404-000-0000 | Website: website@website.com</a>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -92,6 +132,5 @@
 <!-- Custom Script -->
 <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 <script src="assets/js/authentication.js"></script>
-<script src="assets/js/upvote.js"></script>
 <script src="assets/js/wow.js"></script>
 </html>
