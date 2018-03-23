@@ -4,11 +4,17 @@ module.exports = function(sequelize, DataTypes) {
 
     var resources = sequelize.define("resources", {
         Name: DataTypes.STRING,
-        Location: DataTypes.STRING, 
-        Phone_Number: DataTypes.STRING,
+        Address:DataTypes.STRING, 
+        Phone_Number: {
+            type: DataTypes.STRING,
+            validate: {
+                //regular expression: validate phone number
+                is: /^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$/i
+            }
+        },
         Description: DataTypes.TEXT, 
         Price: DataTypes.INTEGER,
-        Insurance_Accepted: DataTypes.BOOLEAN,
+        Insurance_Accepted: DataTypes.STRING,
         Category: DataTypes.STRING,
         Latitude: {
             type: DataTypes.DECIMAL(8,6),
@@ -22,20 +28,6 @@ module.exports = function(sequelize, DataTypes) {
     });
         return resources;
 };
-        
-/* 
-$('.mapmarker').on('click', function(event) {
-    event.preventDefault();
-    var lat = $(this).data.lat;
-    var lng = $(this).data.lng;
-
-    $.post('/api/route/for/map/crap', {
-        lat: lat,
-        lng: lng 
-    }).then(function(data) {
-        console.log(data);
-    });
-}); */
 
 
 
