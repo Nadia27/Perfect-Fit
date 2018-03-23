@@ -13,17 +13,5 @@ module.exports = function (app) {
             
         });
     });
-    //     // POST route for saving a new resource
-    //     app.post("/api/resources", function(req, res){
-    //         console.log(req.body);
-    //         db.resources.create({
-    //             location: req.body.location,
-    //             phone_Number: req.body.Phone_Number,
-    //             description: req.body.Description,
-    //             price: req.body.Price,
-    //             insurance_Accepted: req.body.Insurance_Accepted,
-    //             category: req.body.category
-    //         })
-    //     })
 };
 

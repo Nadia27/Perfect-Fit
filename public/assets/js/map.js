@@ -52,28 +52,37 @@ function makeMarkers() {
     });
 }
 
+var priceRanges = {
+    0: 'FREE',
+    1: '$',
+    2: '$$',
+    3: '$$$',
+    4: '$$$$',
+    5: '$$$$$',
+};
+
 // Function to get each ASD center's complete info when clicking on the marker
 function updatePageContent(data) {
     var infoEl = $('#info');
     infoEl.empty();
     var name = data.Name;
-    var location = data.Location;
+    var address = data.Address;
     var phone = data.Phone_Number;
     var description = data.Description;
     var insuranceAccepted = data.Insurance_Accepted;
     var category = data.Category;
     var price = data.Price;
 
-    var nameEl = $(`<h3>Name: ${name}</h3>`);
-    var locationEl = $(`<p>Location: ${location}</p>`);
+    var nameEl = $(`<h3>${name}</h3>`);
+    var addressEl = $(`<p>Address: ${address}</p>`);
     var phoneEl = $(`<p>Phone: ${phone}</p>`);
     var descriptionEl = $(`<p>Description: ${description}</p>`);
     var insuranceAcceptedEl = $(`<p>Insurance Accepted: ${insuranceAccepted ? 'Yes' : 'No'}</p>`);
     var categoryEl = $(`<p>Category: ${category}</p>`);
-    var priceEl = $(`<p>Price: ${price}</p>`);
+    var priceEl = $(`<p>Price: ${priceRanges[price]}</p>`);
 
     infoEl.append(nameEl);
-    infoEl.append(locationEl);
+    infoEl.append(addressEl);
     infoEl.append(phoneEl);
     infoEl.append(descriptionEl);
     infoEl.append(insuranceAcceptedEl);
