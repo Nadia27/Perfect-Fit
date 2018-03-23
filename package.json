@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,17 @@
     "sequelize": "^4.37.1",
     "socket.io": "^2.0.4",
     "wowjs": "^1.1.3"
-
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juhuyoon/Poisoned_Proxies.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juhuyoon/Poisoned_Proxies/issues"
+  },
+  "homepage": "https://github.com/juhuyoon/Poisoned_Proxies#readme"
 }
