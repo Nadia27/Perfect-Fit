@@ -18,12 +18,12 @@ var btnLogin = document.getElementById('login');
 var bitnSignOut=document.getElementById('logout');
 
 // Logout button
-bitnSignOut.addEventListener('click', e =>{
+/*bitnSignOut.addEventListener('click', e =>{
   e.preventDefault();
   firebase.auth().signOut();
-  window.location = "../../authentication.html"
-})
-
+  window.location = "authentication.html"
+});
+*/
 // Add login event
 btnLogin.addEventListener('click', e => {
   e.preventDefault();  
@@ -51,7 +51,8 @@ btnSignup.addEventListener('click', e =>{
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if(firebaseUser) {
-   window.location = "../../recommend.html"
+  //  e.preventDefault();
+   window.location = "recommend.html"
     console.log( firebaseUser );
   }else {
     console.log('not logged in');
