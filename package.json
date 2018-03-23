@@ -4,9 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+
   },
+  "engines": {
+    "node": "8.1.0"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -33,4 +37,5 @@
     "url": "https://github.com/juhuyoon/Poisoned_Proxies/issues"
   },
   "homepage": "https://github.com/juhuyoon/Poisoned_Proxies#readme"
+  }
 }
