@@ -6,83 +6,170 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
 
-    <title>Main Autism Page</title>
+    <title>Main</title>
 </head>
 
 <body id="Site">
 
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="index.html">Navbar 2</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Add/Recommend</a>
-                </li>
-                <li class="nav-item">
-                    <!-- <a class="nav-link" href="authentication.html">Login</a> -->
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
 
-    <br>
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="index.html" target="_blank">
+            <strong class="blue-text">Autism Center</strong>
+        </a>
+<!-- Links -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-    <div class="container-fluid" id="mainPgContainer">
-        <div class="row">
-            <div class="col-md">
-                Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata
-                usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details of the site
-            </div>
-            <div class="col-md">
-                Random Info 2 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata
-                usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details of the site
-            </div>
-            <div class="col-md">
-                Random Info 3 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent delectus delicata
-                usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details of the site
+    <!-- Left -->
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link waves-effect" href="index.html">Home
+                <span class="sr-only">(current)</span>
+            </a>
+        </li>
+    </ul>
+
+    <!-- Right -->
+    <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+            <a href="map.html" class="nav-link waves-effect" target="_blank">
+                ASD Resources
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="recommend.html" class="nav-link waves-effect" target="_blank">
+                Recommend
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link border border-light rounded waves-effect" data-toggle="modal" data-target="#loginModal" id="modalBtn" target="_blank">
+                Log In
+            </a>
+        </li>
+    </ul>
+
+</div>
+</div>
+</nav>
+
+
+   <!--Intro Section-->
+   <section class="view intro-2 hm-gradient">
+    <div class="full-bg-img">
+        <div class="container flex-center">
+            <div class="row flex-center pt-5 mt-3">
+                <div class="col-md-6 text-center text-md-left margins">
+                    <div class="white-text">
+                        <h2 class="h1-responsive wow fadeInLeft" data-wow-delay="0.3s">Chosen By Family, </h2>
+                        <h2 class="h1-responsive wow fadeInLeft" data-wow-delay="0.3s"> In Mind For Family </h2>
+                            <hr class="hr-light wow fadeInLeft" data-wow-delay="0.3s">
+                            <h6 class="wow fadeInLeft" data-wow-delay="0.3s"> </h6>
+                            <br>
+                            <a target="_blank" href="map.html" class="btn btn-outline-white wow fadeInLeft" data-wow-delay="0.3s">Learn more</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 wow fadeInRight d-flex justify-content-center" data-wow-delay="0.3s">
+                    <img id="photo" src="assets/images/familyphoto.jpeg" alt="" class="img-responsive">
+                </div>
             </div>
         </div>
     </div>
+</section>
 
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md">
+            <!-- Card -->
+            <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            
+                <!-- Content -->
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h3 class="card-title pt-2 blue-text">
+                            <strong>Who We Are</strong>
+                        </h3>
+                        <p>We are a privately owned website with children and siblings who are diagnosed with Autism Spectrum Disorder.
+                            Out of a desire to help other family members find the programs they need, we work towards giving resources to the community.
+                        </p>
+                    </div>
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Card -->
+            </div>
+            <div class="col-md">
+            <!-- Card -->
+            <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            
+                <!-- Content -->
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>                          
+                        <h3 class="card-title pt-2 blue-text">
+                            <strong>How We Research</strong>
+                        </h3>
+                        <p>All locations and programs that are reflected on this website are ones we have used, experienced, and can support to other family members. 
+                            No programs will be added on unless thoroughly researched and vetted by our families. 
+                        </p>
+                    </div>
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Card -->
+            </div>
+            <div class="col-md">
+            <!-- Card -->
+            <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2814%29.jpg);">
+            
+                <!-- Content -->
+                <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                    <div>
+                        <h3 class="card-title pt-2 blue-text">
+                            <strong>How to Join</strong>
+                        </h3>
+                        <p>To comment on locations and to send recommendations to be added to the list, users must Sign up and verify that 
+                            whether users have families or have extensive experience with working with individuals with ASD.
+                            <br>
+                        </p>
+                    </div>
+                </div>
+                <!-- Content -->
+            </div>
+            <!-- Card -->
+            </div>
+        </div>
+    </div>
+    <!-- Mission statement -->
     <div class="container" id="missionContainer">
         <div class="row">
             <div class="col-lg">
-                Our Mission Statement: Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix
-                ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details
-                of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
-                at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant
-                Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
-                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-                Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
-                copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-                Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
-                copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-                Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
-                copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-                Eos erant Details of the Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae
-                legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-                Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
-                copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-                Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
-                copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
-                Eos erant Details of the site
-
+            <section class="pt-5">
+                <div class="wow fadeIn">
+                    <h2 class="h1 text-center mb-5">Our Mission Statement</h2>
+                    <p class="text-center mb-5 pb-5">Autism Spectrum Disorder is a mental disorder that changes not only the individuals' life afflicted by it, but also 
+                                          changes the life of those who are close to them. Despite the numerous programs and aid available within Georgia,
+                                            as parents and family members, we can't help but worry whether the program we see are truly fit for our loved ones.
+                                            We at ( __________ ) believe that programs experienced and recommended by families with ASD individuals can help
+                                            reduce concerns about safety and we want to help bridge that gap. </p>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -112,25 +199,45 @@
             </div>
         </div>
     </div>
-    
-    <!-- Footer -->
-    <footer class="footer" align="center">
-        <div class="container">
-            <cite title="Source Title">Phone Number: 404-000-0000 | Website: website@website.com | Github | &copy; Copyright 2018 Poisoned Proxies</cite>
-        </div>
-    </footer>
+
+<!--Footer-->
+<footer class="page-footer text-center font-small mdb-color primary-color mt-4 wow fadeIn">
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa fa-facebook mr-3"></i>
+        </a>
+
+        <a href="https://twitter.com/" target="_blank">
+            <i class="fa fa-twitter mr-3"></i>
+        </a>
+        
+        <a href="https://github.com/juhuyoon/Poisoned_Proxies" target="_blank">
+            <i class="fa fa-github mr-3"></i>
+        </a>
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+        © 2018 Copyright: Poisoned Proxies | Phone Number: 404-000-0000 | Website: website@website.com</a>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
 
 </body>
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-
-<script type="text/javascript" src="assets/js/authentication.js"></script>
-
+  
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+<script src="assets/js/wow.js"></script>
 </html>

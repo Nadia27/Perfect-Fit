@@ -2,19 +2,40 @@
 //"DataTypes" defines what type of data
 module.exports = function(sequelize, DataTypes) {
 
-    var ASD_resources_table = sequelize.define("ASD_resources_table", {
+    var resources = sequelize.define("resources", {
         Name: DataTypes.STRING,
         Location: DataTypes.STRING, 
         Phone_Number: DataTypes.STRING,
         Description: DataTypes.TEXT, 
         Price: DataTypes.INTEGER,
         Insurance_Accepted: DataTypes.BOOLEAN,
-        Catergory: DataTypes.STRING
-        });
+        Category: DataTypes.STRING,
+        Latitude: {
+            type: DataTypes.DECIMAL(8,6),
+            notNull: true            // won't allow null
+        },
+        Longitude: {
+            type: DataTypes.DECIMAL(8,6),
+            notNull: true   // won't allow null
+        }
     
-        return ASD_resources_table;
-        
+    });
+        return resources;
 };
+        
+/* 
+$('.mapmarker').on('click', function(event) {
+    event.preventDefault();
+    var lat = $(this).data.lat;
+    var lng = $(this).data.lng;
+
+    $.post('/api/route/for/map/crap', {
+        lat: lat,
+        lng: lng 
+    }).then(function(data) {
+        console.log(data);
+    });
+}); */
 
 
 

@@ -6,70 +6,96 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="assets/css/map.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
     <!-- Firebase Reference -->
 
     <!-- Google map API-->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7obRx7vf5Ef2XTKtUdhPMjd9SqNymQZ0&callback=initMap"
-        type="text/javascript"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7obRx7vf5Ef2XTKtUdhPMjd9SqNymQZ0"></script>
 
-    <title>Map Page</title>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script defer src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Custom Script -->
+    <script defer src="assets/js/map.js"></script>
+    <!-- <script defer src="assets/js/authentication.js"></script> -->
+    <!-- <script defer src="public/assets/js/upvote.js"></script> -->
+
+    <title>ASD Resources</title>
 </head>
-
+<br>
 <body id="Site">
+    
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
 
-    <!-- Nav Bar -->
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <div class="mx-auto order-0">
-            <a class="navbar-brand mx-auto" href="index.html">Navbar 2</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="recommend.html">Add/Recommend</a>
-                </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal" id="modalBtn">Log in</button>
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="index.html" target="_blank">
+            <strong class="blue-text">Autism Center</strong>
+        </a>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!-- Left -->
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link waves-effect" href="index.html">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
                 </li>
             </ul>
-        </div>
-    </nav>
-    <br>
 
-    <!-- Search box -->
-    <div class="container-fluid">
-        <div id="search" class="float-right">
-            <img src="img_girl.jpg" alt="Girl in a jacket">
-            <input type="text" placeholder="Search..">
+            <!-- Right -->
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a href="map.html" class="nav-link waves-effect" target="_blank">
+                        ASD Resources
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="recommend.html" class="nav-link waves-effect" target="_blank">
+                        Recommend
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link border border-light rounded waves-effect" data-toggle="modal" data-target="#loginModal" id="modalBtn"
+                        target="_blank">
+                        Log In
+                    </a>
+                </li>
+            </ul>
+
         </div>
     </div>
-    <br>
-    <br>
+</nav>
 
+    <br>
+    <br>
+    <!-- Main content -->
     <div class="container-fluid" id="mapPgContainer">
         <div class="row">
             <div class="col-md-6" style="min-height: 900px;">
                 <!-- Div to display map -->
-                <div id="map">
-
-                </div>
+                <div id="map"></div>
             </div>
+            <!-- Div where center will be displayed once user clicks on map marker -->
             <div class="col-md-6">
-                <p>Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos at vix ad putent
-                    delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos erant Details of
-                    the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
-                    at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit. Eos
-                    erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare his consul
-                    copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae
-                    hendrerit. Eos erant Details of the site Random Info 1 Lorem ipsum dolor sit amet et delectus accommodare
-                    his consul copiosae legendos at vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute
-                    copiosae hendrerit. Eos erant Details of the site.</p>
+                <div id="info">
+                    <h2>Instructions</h3>
+                        <p class="lead">Click on a pin on the map to see information about a specific center or program!</p>
+                </div>
                 <br>
+                <!-- Leave a comment form -->
                 <h3>Leave a Comment</h3>
                 <hr>
                 <form>
@@ -83,93 +109,91 @@
                     </div>
                     <div class="form-group">
                         <label for="comment">Your Message:</label>
-                        <textarea class="form-control" id="authorComment" rows="5" required></textarea>
+                        <textarea class="form-control" id="authorComment" rows="2" required></textarea>
                     </div>
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </form>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-3">
-
-            </div>
-            <div class="col-md-6" id="commentThreads">
-                <div class="card text-center">
-                    <div class="card-header">
-                        Comments
+            <!-- Where the comments will be posted -->
+            <div class="row">
+                    <div class="col-md-3">
+        
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Special title treatment</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                        2 days ago
-                    </div>
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLongTitle">Please Login or Create Accout</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email Address</label>
+                            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="John@soandso.net" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" id="createAccount">Create Account</button>
+                    <button class="btn btn-primary" id="login">Log in</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalLongTitle">Please Login or Create Accout</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email Address</label>
-                                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="John@soandso.net" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" class="form-control" id="inputPassword" placeholder="Enter Password" required>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-primary" id="createAccount">Create Account</button>
-                        <button class="btn btn-primary" id="login">Log in</button>
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!--Footer-->
+<footer class="page-footer text-center font-small mdb-color primary-color mt-4 wow fadeIn">
 
-    <!-- <template id="post-template">
-        <li class="list-group-item">
-            <i class="glyphicon glyphicon-chevron-up" @click="upvote" :class="{disabled: upvoted}"></i>
-            <span class="label label-primary">{{ votes }}</span>
-            <i class="glyphicon glyphicon-chevron-down" @click="downvote" :class="{disabled: downvoted}"></i>
-            <a>{{ post.title }}</a>
-        </li>
-    </template> -->
+        <hr class="my-4">
     
-    <!-- Footer -->
-    <footer class="footer" align="center">
-        <div class="container">
-            <cite title="Source Title">Phone Number: 404-000-0000 | Website: website@website.com | Github | &copy; Copyright 2018 Poisoned Proxies</cite>
+        <!-- Social icons -->
+        <div class="pb-4">
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="fa fa-facebook mr-3"></i>
+            </a>
+    
+            <a href="https://twitter.com/" target="_blank">
+                <i class="fa fa-twitter mr-3"></i>
+            </a>
+    
+            <a href="https://github.com/juhuyoon/Poisoned_Proxies" target="_blank">
+                <i class="fa fa-github mr-3"></i>
+            </a>
         </div>
+        <!-- Social icons -->
+    
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2018 Copyright: Poisoned Proxies | Phone Number: 404-000-0000 | Website: website@website.com</a>
+        </div>
+        <!--/.Copyright-->
+    
     </footer>
-
+    
 </body>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-<script src="public/assets/js/upvote.js"></script>
-
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<!-- Custom Script -->
 <script type="text/javascript" src="assets/js/map.js"></script>
+<script type="text/javascript" src="assets/js/authentication.js"></script>
+<script src="public/assets/js/upvote.js"></script>
 
 </html>
