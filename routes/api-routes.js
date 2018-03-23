@@ -12,28 +12,17 @@ var db = require("../models");
 // =============================================================
 module.exports = function (app) {
 
-    // GET route for getting all of the resources
-    app.get("/api/resources", function (req, res) {
-        // findAll returns all entries for a table when used with no options
-        db.ASD_resources_table.findAll({}).then(function (dbASD_resources_table) {
-            // We have access to the resources as an argument inside of the callback function
-            res.json(dbASD_resources_table);
-        });
-    });
-
-    app.get("/", function (req, res) {
-        // findAll returns all entries for a table when used with no options
-        db.ASD_resources_table.findAll({}).then(function (dbASD_resources_table) {
-            // We have access to the resources as an argument inside of the callback function
-            res.json(dbASD_resources_table);
-        });
-    });
-
-    // POST route for saving a new post
+// POST route for saving a new post
     app.post("/api/suggested", function (req, res) {
         console.log(req.body);
-        db.suggested.create(req.body).then(function (dbsuggested) {
-            res.json(dbsuggested);
+        db.suggested.create({
+            Name: req.body.Name, 
+            Address: req.body.Address,
+            Phone_Number: req.body.Phone_Number, 
+            Price: req.body.Price, 
+            Insurance_Accepted: req.body.Insurance_Accepted, 
+            Category: req.body.Category
+        }).then(() => res.send('Ok')); 
+           // res.json(dbsuggested);
         });
-    });
-};
+    };
