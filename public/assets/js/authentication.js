@@ -18,11 +18,11 @@ var btnLogin = document.getElementById('login');
 var bitnSignOut=document.getElementById('logout');
 
 // Logout button
-bitnSignOut.addEventListener('click', e =>{
-  e.preventDefault();
-  firebase.auth().signOut();
-  window.location = "index.html"
-});
+// bitnSignOut.addEventListener('click', e =>{
+//   e.preventDefault();
+//   firebase.auth().signOut();
+//   window.location = "index.html"
+// });
 
 // Add login event
 btnLogin.addEventListener('click', e => {
