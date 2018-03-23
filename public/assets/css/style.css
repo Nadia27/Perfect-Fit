@@ -4,11 +4,20 @@
     background-color: whitesmoke;
 }
 
+#Authentication{
+    padding-top: 5rem;
+}
+
+
 #photo {
     height: 30rem;
     width: 45rem;
 }
 
+#logout {
+    padding: 0.5rem;
+    margin-left: 1rem;
+}
 
 .intro-2 {
     background: url("https://mdbootstrap.com/img/Photos/Others/architecture.jpg")no-repeat center center;
