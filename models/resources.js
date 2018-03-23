@@ -1,7 +1,7 @@
 //"sequelize" param is connection to database
 //"DataTypes" defines what type of data
 module.exports = function(sequelize, DataTypes) {
-heol
+
     var resources = sequelize.define("resources", {
         Name: DataTypes.STRING,
         Address:DataTypes.STRING, 
