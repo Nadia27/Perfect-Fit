@@ -1,4 +1,3 @@
-
 // Initialize Firebase
 var config = {
   apiKey: "AIzaSyAZ5ZrtgqHBA5U2PySfA77GgptWCoDnDC8",
@@ -57,5 +56,9 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
   }else {
     console.log('not logged in');
   }
-})
+});
+
+if (!firebase.apps.length) {
+  firebase.initializeApp({});
+};
 
