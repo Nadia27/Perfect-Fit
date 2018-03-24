@@ -73,13 +73,13 @@ function updatePageContent(data) {
     var category = data.Category;
     var price = data.Price;
 
-    var nameEl = $(`<h3>${name}</h3>`);
-    var addressEl = $(`<p>Address: ${address}</p>`);
-    var phoneEl = $(`<p>Phone: ${phone}</p>`);
-    var descriptionEl = $(`<p>Description: ${description}</p>`);
-    var insuranceAcceptedEl = $(`<p>Insurance Accepted: ${insuranceAccepted ? 'Yes' : 'No'}</p>`);
-    var categoryEl = $(`<p>Category: ${category}</p>`);
-    var priceEl = $(`<p>Price: ${priceRanges[price]}</p>`);
+    var nameEl = $(`<h3 class="text-center">${name}</h3>`);
+    var addressEl = $(`<p class="text-center">Address: ${address}</p>`);
+    var phoneEl = $(`<p class="text-center">Phone: ${phone}</p>`);
+    var descriptionEl = $(`<p class="text-center">Description: ${description}</p>`);
+    var insuranceAcceptedEl = $(`<p class="text-center">Insurance Accepted: ${insuranceAccepted ? 'Yes' : 'No'}</p>`);
+    var categoryEl = $(`<p class="text-center">Category: ${category}</p>`);
+    var priceEl = $(`<p class="text-center">Price: ${priceRanges[price]}</p>`);
 
     infoEl.append(nameEl);
     infoEl.append(addressEl);
