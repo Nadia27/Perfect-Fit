@@ -48,11 +48,11 @@ btnSignup.addEventListener('click', e =>{
 
 });
 
-firebase.auth().onAuthStateChanged(firebaseUser, e => {
-  if(firebaseUser) {
+firebase.auth().onAuthStateChanged(firebase.User, e => {
+  if(firebase.User) {
   e.preventDefault();
    window.location = "recommend.html"
-    console.log( firebaseUser );
+    console.log( firebase.User );
   }else {
     console.log('not logged in');
   }
