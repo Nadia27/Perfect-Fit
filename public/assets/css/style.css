@@ -19,6 +19,13 @@
     margin-left: 1rem;
 }
 
+#comments-container {
+    padding: 20px;
+    margin: 0px;
+    font-size: 14px;
+    font-family: "Arial", Georgia, Serif;
+}
+
 .intro-2 {
     background: url("https://mdbootstrap.com/img/Photos/Others/architecture.jpg")no-repeat center center;
     background-size: cover;
