@@ -80,7 +80,6 @@ function updatePageContent(data) {
     var insuranceAcceptedEl = $(`<p class="text-center">Insurance Accepted: ${insuranceAccepted ? 'Yes' : 'No'}</p>`);
     var categoryEl = $(`<p class="text-center">Category: ${category}</p>`);
     var priceEl = $(`<p class="text-center">Price: ${priceRanges[price]}</p>`);
-    var recommendEl = $('<a href="recommend.html" class="nav-link waves-effect text-center" target="_blank"> Recommend </a>')
     infoEl.append(nameEl);
     infoEl.append(addressEl);
     infoEl.append(phoneEl);
@@ -88,7 +87,6 @@ function updatePageContent(data) {
     infoEl.append(insuranceAcceptedEl);
     infoEl.append(categoryEl);
     infoEl.append(priceEl);
-    infoEl.append(recommendEl);
 }
 
 // Ready Function
