@@ -80,7 +80,7 @@ function updatePageContent(data) {
     var insuranceAcceptedEl = $(`<p class="text-center">Insurance Accepted: ${insuranceAccepted ? 'Yes' : 'No'}</p>`);
     var categoryEl = $(`<p class="text-center">Category: ${category}</p>`);
     var priceEl = $(`<p class="text-center">Price: ${priceRanges[price]}</p>`);
-    var recommendEl = $('<a href="recommend.html" class="nav-link waves-effect" target="_blank"> Recommend </a>')
+    var recommendEl = $('<button type="button" class="btn btn-primary" a href="recommend.html"  id="submit">Recommend</button>')
     infoEl.append(nameEl);
     infoEl.append(addressEl);
     infoEl.append(phoneEl);
