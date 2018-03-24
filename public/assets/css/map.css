@@ -33,7 +33,14 @@ nav {
 
 /* Styling for map*/
 #map {
-	height: 50%;
+	height: 100%;
     width: 100%;
 }
 
+#background{
+    padding-left: 5rem;
+}
+
+#size {
+    font-size: 25px;
+}
