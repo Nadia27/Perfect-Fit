@@ -32,78 +32,75 @@
     <title>Resources</title>
 </head>
 <body id="Site">
+<!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+    <div class="container">
 
-    <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
-        <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="index.html" target="_blank">
+            <strong class="blue-text">Perfect Fit</strong>
+        </a>
+<!-- Links -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-            <!-- Brand -->
-            <a class="navbar-brand waves-effect" href="index.html" target="_blank">
-                <strong class="blue-text">Perfect Fit</strong>
+    <!-- Left -->
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link waves-effect" href="index.html">Home
+                <span class="sr-only">(current)</span>
             </a>
-            <!-- Links -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        </li>
+    </ul>
 
-                <!-- Left -->
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link waves-effect" href="index.html">Home
-                            <span class="sr-only">(current)</span>
-                        </a>
-                    </li>
-                </ul>
+    <!-- Right -->
+    <ul class="navbar-nav nav-flex-icons">
+        <li class="nav-item">
+            <a href="chat.html" class="nav-link waves-effect" target="_blank">
+                Chat
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="recommend.html" class="nav-link waves-effect" target="_blank">
+                Recommend
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link border border-light rounded waves-effect" data-toggle="modal" data-target="#loginModal" id="modalBtn" target="_blank">
+                Log In
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link border border-light rounded waves-effect" href="index.html" id="logout" class="nav-link waves-effect" target="_blank">
+                Signout
+            </a>
+        </li>
+    </ul>
 
-                <!-- Right -->
-                <ul class="navbar-nav nav-flex-icons">
-                    <li class="nav-item">
-                        <a href="chat.html" class="nav-link waves-effect" target="_blank">
-                            Chat
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="recommend.html" class="nav-link waves-effect" target="_blank">
-                            Recommend
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link border border-light rounded waves-effect" data-toggle="modal" data-target="#loginModal" id="modalBtn" target="_blank">
-                            Log In
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link border border-light rounded waves-effect" href="index.html" id="logout" class="nav-link waves-effect" target="_blank">
-                            Signout
-                        </a>
-                    </li>
-                </ul>
-        </div>
-    </div>
+</div>
+</div>
 </nav>
+
 <div id="Authentication">
     <!-- Main content -->
     <div class="container-fluid" id="mapPgContainer">
         <div class="row">
-            <div class="col-md-6" style="min-height: 400px;">
+            <div class="col-md-6" style="min-height: 410px;">
                 <!-- Div to display map -->
                 <div id="map"></div>
             </div>
             <!-- Div where center will be displayed once user clicks on map marker -->
             <div class="col-md-6">
-                <div id="info">
-                    <h2>Instructions</h3>
+                <div id="info"><br>
+                    <h2 class="text-center">Instructions</h3>
+                        <br><br><br><br><br>
                         <p class="lead">Click on a pin on the map to see information about a specific center or program!</p>
                 </div>
             </div>
         </div>
     </div>
-    <br>
-        <div class="view" id="background">
-            <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" class="img-fluid wow fadeIn data-wow-delay="2s"" alt="placeholder" >
-            <div class="mask flex-center waves-effect waves-light rgba-light-blue-weak">
-                <p class="white-text" id="size">Trusted with Family, For Family</p>
-            </div>
-        </div>
- 
+ <br>
+ <br>
+ <br>
             <!-- Login Modal -->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
