@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/map.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animate.css">
-
+    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Material Design Bootstrap -->
@@ -29,7 +29,7 @@
     <script defer src="assets/js/chat.js"></script>
 
 
-    <title>ASD Resources</title>
+    <title>Resources</title>
 </head>
 <br>
 
@@ -59,12 +59,12 @@
                 <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
                         <a href="map.html" class="nav-link waves-effect" target="_blank">
-                            ASD Resources
+                            Resources
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="recommend.html" class="nav-link waves-effect" target="_blank">
-                            Recommend
+                        <a href="chat.html" class="nav-link waves-effect" target="_blank">
+                            Chat
                         </a>
                     </li>
                     <li class="nav-item">
@@ -73,7 +73,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.html" id="logout" class="nav-link waves-effect" target="_blank">
+                        <a class="nav-link border border-light rounded waves-effect" href="index.html" id="logout" class="nav-link waves-effect" target="_blank">
                             Signout
                         </a>
                     </li>
@@ -81,10 +81,9 @@
 
             </div>
         </div>
-    </nav>
-
-    <br>
-    <br>
+    </div>
+</nav>
+<div id="Authentication">
     <!-- Main content -->
     <div class="container-fluid" id="mapPgContainer">
         <div class="row">
@@ -119,11 +118,7 @@
                 </form>
             </div>
         </div>
-        <!-- Where the comments will be posted -->
-        <div class="row">
-            <div class="col-md-3">
-
-            </div>
+ 
             <!-- Login Modal -->
             <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="modalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -154,7 +149,7 @@
                     </div>
                 </div>
             </div>
-
+        </div>
             <!--Footer-->
             <footer class="page-footer text-center font-small mdb-color primary-color mt-4 wow fadeIn">
 
