@@ -111,20 +111,3 @@
 </body>
 </html>
 
-<<<<<<< HEAD
-=======
-<html>
-  <body>
-    <p id='server-time'></p>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-      var socket = io();
-      var el = document.getElementById('server-time');
-      socket.on('time', function(timeString) {
-        el.innerHTML = 'Server time: ' + timeString;
-      });
-    </script>
-  </body>
-
-</html>
->>>>>>> ad21553a25228cba2c8655b52bb0ce034b39fbcf
