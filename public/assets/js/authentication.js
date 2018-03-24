@@ -48,7 +48,7 @@ btnSignup.addEventListener('click', e =>{
 
 });
 
-firebase.auth().onAuthStateChanged(firebaseUser => {
+firebase.auth().onAuthStateChanged(firebaseUser, e => {
   if(firebaseUser) {
   e.preventDefault();
    window.location = "recommend.html"
