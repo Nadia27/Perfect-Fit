@@ -48,17 +48,17 @@ btnSignup.addEventListener('click', e =>{
 
 });
 
-// firebase.auth().onAuthStateChanged(firebaseUser => {
-//   if(firebaseUser) {
-//   //  e.preventDefault();
-//    window.location = "recommend.html"
-//     console.log( firebaseUser );
-//   }else {
-//     console.log('not logged in');
-//   }
-// });
+firebase.auth().onAuthStateChanged(firebaseUser => {
+  if(firebaseUser) {
+  e.preventDefault();
+   window.location = "recommend.html"
+    console.log( firebaseUser );
+  }else {
+    console.log('not logged in');
+  }
+});
 
-// if (!firebase.apps.length) {
-//   firebase.initializeApp({});
-// };
+if (!firebase.apps.length) {
+  firebase.initializeApp({});
+};
 
