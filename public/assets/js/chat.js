@@ -1,5 +1,5 @@
 // make connection
-var socket = io();
+var socket = io('https://frozen-fortress-74218.herokuapp.com/');
 // query the dom
 
 var message = document.getElementById('message');
