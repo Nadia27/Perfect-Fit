@@ -1,25 +1,31 @@
-var express = require('express');
-var socket = require('socket.io');
+var app = require('express')();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-
-
-var app = express();
-var server = app.listen(4000, function(){
-	console.log('listening to request on port 4000');
+app.get('/', function(req, res) {
+   res.sendfile('../chat.html');
 });
-app.use(express.static('public'));
 
-var io = socket(server);
+users = [];
+io.on('connection', function(socket) {
+   console.log('A user connected');
+   socket.on('setUsername', function(data) {
+      console.log(data);
+      
+      if(users.indexOf(data) > -1) {
+         socket.emit('userExists', data + ' username is taken! Try some other username.');
+      } else {
+         users.push(data);
+         socket.emit('userSet', {username: data});
+      }
+   });
+   
+   socket.on('msg', function(data) {
+      //Send message to everyone
+      io.sockets.emit('newmsg', data);
+   })
+});
 
-io.on('connection', function(socket){
-	console.log('made socket connection', socket.id);
-
-	socket.on('chat', function(data){
-		io.sockets.emit('chat', data);
-	});
-
-	socket.on('typing', function(data){
-		socket.broadcast.emit('typing', data)
-	});
-
+http.listen(3000, function() {
+   console.log('listening on localhost:3000');
 });
