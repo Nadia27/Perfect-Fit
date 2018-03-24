@@ -4,9 +4,9 @@ $("#submit").on("click", function(event){
     event.preventDefault();
 
     //TODO:FIXME: price level should be display 0 (meaning free service) through 5 (highest) 
-    //TODO:FIXME: changing number to dollar sign
+  
     //TODO:FIXME: axe price and insurance fields ?? let company do own research
-    //TODO:FIXME: Pop up alerting user recomm was received
+ 
     
     
     //Create a new resource object
