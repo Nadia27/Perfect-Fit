@@ -4,7 +4,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
 		<!-- Required meta tags -->
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">		<link rel="stylesheet" href="assets/css/style.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="assets/css/style.css">
 		<link rel="stylesheet" href="assets/css/animate.css">
 		<link rel="stylesheet" href="assets/css/reset.css">
 		<!-- Font Awesome -->
@@ -13,7 +14,8 @@
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 		<!-- Material Design Bootstrap -->
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
-
+		<script src = "/socket.io/socket.io.js"></script>
+		<script src="assets/js/chat.js" type="text/javascript"></script>
 	<title>Chatroom</title>
 </head>
 <body id="Site">
@@ -68,55 +70,14 @@
 	</nav>
 
 	<div id="chat">
-		<div id="chatwindow">
-			<div id="output"></div>
-			<div id="feedback"></div>
-		</div>
-		<input id="userName" type="text" placeholder="userName">
-		<input id="message" type="text" placeholder="message">
-		<button id="send">Send</button>
+		<div id = "error-container"></div>
+		<input id = "name" type = "text" name = "name" value = "" 
+		   placeholder = "Enter your name!">
+		<button type = "button" name = "button" onclick = "setUsername()">
+		   Let me chat!
+		</button>
 	</div>
 
-	<!--Footer-->
-	<footer class="page-footer text-center font-small mdb-color primary-color mt-4 wow fadeIn">
-	
-		<hr class="my-4">
-	
-		<!-- Social icons -->
-		<div class="pb-4">
-			<a href="https://www.facebook.com/" target="_blank">
-				<i class="fa fa-facebook mr-3"></i>
-			</a>
-	
-			<a href="https://twitter.com/" target="_blank">
-				<i class="fa fa-twitter mr-3"></i>
-			</a>
-	
-			<a href="https://github.com/juhuyoon/Poisoned_Proxies" target="_blank">
-				<i class="fa fa-github mr-3"></i>
-			</a>
-		</div>
-		<!-- Social icons -->
-	
-		<!--Copyright-->
-		<div class="footer-copyright py-3">
-			© 2018 Copyright: Perfect Fit | Poisoned Proxies | Phone Number: 404-000-0000 | Website: website@website.com</a>
-		</div>
-		<!--/.Copyright-->
-	
-	</footer>
-
-<script src="assets/js/chat.js" type="text/javascript"></script>
-<script src="assets/js/authentication.js" type="text/javascript"></script>
-</body>
-</html>
-
-<<<<<<< HEAD
-=======
-<html>
-  <body>
-    <p id='server-time'></p>
-    <script src="/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
       var el = document.getElementById('server-time');
@@ -124,7 +85,6 @@
         el.innerHTML = 'Server time: ' + timeString;
       });
     </script>
-  </body>
-
+</body>
 </html>
->>>>>>> ad21553a25228cba2c8655b52bb0ce034b39fbcf
+
