@@ -7,7 +7,7 @@ Autism Spectrum Disorder is a mental disorder that changes not only the individu
 * Junghoon Yoon https://github.com/juhuyoon/ 
 * Daniela Jaros https://github.com/jaro0024 
 * Nadia Abby https://github.com/Nadia27
-* Jalil Baker https://github.com/twidt 
+* Jalil Baker https://github.com/jalilbaker 
  
 
 ## Getting Started
